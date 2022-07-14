@@ -1,6 +1,6 @@
 variable "terraform_version" {
   type        = string
-  default     = "Terraform"
+  default     = "1.1.9"
   description = "Terraform version"
 }
 

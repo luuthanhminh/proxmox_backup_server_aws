@@ -1,10 +1,24 @@
 # Debian 10 Buster
+# Debian 10 Buster
 data "aws_ami" "debian-10" {
   most_recent = true
-  owners      = ["136693071363"]
+  owners = ["136693071363"]
   filter {
     name   = "name"
-    values = ["debian-10-arm64-*"]
+    values = ["debian-10-amd64-*"]
+  }
+  filter {
+    name   = "virtualization-type"
+    values = ["hvm"]
+  }
+}
+# Debian 11 Bullseye
+data "aws_ami" "debian-11" {
+  most_recent = true
+  owners = ["136693071363"]
+  filter {
+    name   = "name"
+    values = ["debian-11-amd64-*"]
   }
   filter {
     name   = "virtualization-type"
