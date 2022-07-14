@@ -31,3 +31,8 @@ apt install proxmox-backup ifupdown -y
 
 apt dist-upgrade -y
 
+passwd root
+# Then a new passwd will be asked, so enter new passwd and then confirm it. 
+#then make sure you reboot.
+reboot
+
